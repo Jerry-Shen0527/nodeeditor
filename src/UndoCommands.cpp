@@ -340,6 +340,7 @@ QJsonObject PasteCommand::makeNewNodeIdsInScene(QJsonObject const &sceneJson)
         mapNodeIds[oldNodeId] = newNodeId;
 
         // Replace NodeId in json
+        nodeJson["oldId"] = static_cast<qint64>(oldNodeId);
         nodeJson["id"] = static_cast<qint64>(newNodeId);
 
         newNodesJsonArray.append(nodeJson);

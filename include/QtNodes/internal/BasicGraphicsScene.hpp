@@ -151,7 +151,7 @@ public Q_SLOTS:
 
     void onModelReset();
 
-private:
+protected:
     AbstractGraphModel &_graphModel;
 
     using UniqueNodeGraphicsObject = std::unique_ptr<NodeGraphicsObject>;
